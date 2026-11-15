@@ -6,11 +6,11 @@ const productController = (req: IncomingMessage, res: ServerResponse) => {
 
     if (method == "GET") {
 
-
+        const data = productService();
         res.writeHead(200, { 'content-type': 'application/json' });
 
-        res.end(JSON.stringify({ message: "This is product page" }));
-        productService();
+        res.end(JSON.stringify({ message: data }));
+
     }
 
 
