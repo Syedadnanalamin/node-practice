@@ -1,33 +1,8 @@
 import { createServer, IncomingMessage, Server, ServerResponse } from "node:http";
+import router from "./routes/routes";
 const server: Server = createServer((req: IncomingMessage, res: ServerResponse) => {
 
-
-
-    const { url, method } = req;
-
-
-    if (url == "/" && method == "GET") {
-
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ message: "this is the route page" }));
-        console.log(url, method);
-
-    }
-
-    else if (url?.startsWith("/product")) {
-
-
-        res.writeHead(200, { 'content-type': 'application/json' });
-
-        res.end(JSON.stringify({ message: "This is product page" }));
-    }
-
-    else {
-        res.end("router is not defined ");
-        console.log(url);
-
-    }
-
+    router(req, res);
 
 
 

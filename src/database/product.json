@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Bluetooth Headphones",
+        "description": "High-quality wireless headphones with noise cancellation.",
+        "price": 2499,
+        "category": "Electronics",
+        "brand": "Sony",
+        "stock": 25,
+        "rating": 4.5,
+        "isAvailable": true
+    },
+    {
+        "id": 2,
+        "name": "Mechanical Gaming Keyboard",
+        "description": "RGB mechanical keyboard with blue switches.",
+        "price": 3599,
+        "category": "Accessories",
+        "brand": "Redragon",
+        "stock": 15,
+        "rating": 4.7,
+        "isAvailable": true
+    },
+    {
+        "id": 3,
+        "name": "Men's Casual T-Shirt",
+        "description": "Comfortable cotton t-shirt for everyday use.",
+        "price": 650,
+        "category": "Fashion",
+        "brand": "Easy",
+        "stock": 50,
+        "rating": 4.2,
+        "isAvailable": true
+    },
+    {
+        "id": 4,
+        "name": "Smart Watch",
+        "description": "Smart watch with fitness tracking and heart rate monitoring.",
+        "price": 4299,
+        "category": "Electronics",
+        "brand": "Xiaomi",
+        "stock": 0,
+        "rating": 4.3,
+        "isAvailable": false
+    },
+    {
+        "id": 5,
+        "name": "Laptop Backpack",
+        "description": "Water-resistant backpack with a 15.6-inch laptop compartment.",
+        "price": 1299,
+        "category": "Bags",
+        "brand": "American Tourister",
+        "stock": 30,
+        "rating": 4.6,
+        "isAvailable": true
+    }
+]
