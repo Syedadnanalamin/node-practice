@@ -1,15 +1,20 @@
 import { IncomingMessage, ServerResponse } from "http";
 import productService from "../service/product.service";
 import { product } from "../types/types";
+import { bodyPurser } from "../utils/parseBody";
 
-const productController = (req: IncomingMessage, res: ServerResponse) => {
+const productController = async (req: IncomingMessage, res: ServerResponse) => {
     const { url, method } = req;
 
     const reqParams = url?.split("/");
     const productId = reqParams && Number(reqParams[2]) || null;
-    console.log(url)
+
+
+
     // getting product route
     if (url == "/product" && method == "GET") {
+
+
 
         const products = productService();
         res.writeHead(200, { 'content-type': 'application/json' });
@@ -17,6 +22,8 @@ const productController = (req: IncomingMessage, res: ServerResponse) => {
         res.end(JSON.stringify({ message: products }));
 
     }
+
+    // getting specifiq product details ;
     else if (productId && method == "GET") {
 
         const products = productService();
@@ -28,6 +35,7 @@ const productController = (req: IncomingMessage, res: ServerResponse) => {
         res.end(JSON.stringify({ message: product }));
 
     }
+
 
 
 
